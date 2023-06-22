@@ -1,0 +1,14 @@
+<div class="row mt-5">
+    <div class="col">
+        <div class="form-group">
+            <label for="title">Post Title</label>
+            <input type="text" name="title" id="title" class="form-control" placeholder="Post Title" [(ngModel)]="title">
+        </div>
+         <label for="content">Post Content</label>
+            <!-- <app-ngx-editor placeholder="Enter text here..." [spellcheck]="true" [(ngModel)]="content"></app-ngx-editor> -->
+            <angular-editor placeholder="'Enter text here...'" [(ngModel)]="content" [config]="editorConfig"></angular-editor>
+        </div>
+        <div class="form-group d-flex justify-content-end">
+            <button (click)="createPost()" class="btn btn-warning round">Submit</button>
+        </div>
+    </div>
